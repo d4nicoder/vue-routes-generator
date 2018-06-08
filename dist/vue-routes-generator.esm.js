@@ -17,9 +17,12 @@ var Router$1 = function Router () {
 
 Router$1.prototype.route = function route (path, options) {
 	for (var i = 0; i < rutas.length; i++) {
+		console.log(rutas[i]);
 		if (rutas[i].ruta.path === path) {
 			for (var prop in options) {
-				if (prop !== 'component') {
+				if (prop !== 'component' && prop !== 'path') {
+					console.log('Añadimos: ' + prop);
+					console.log(options[prop]);
 					rutas[i].ruta[prop] = options[prop];
 				}
 			}
