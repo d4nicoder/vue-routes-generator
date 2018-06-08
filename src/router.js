@@ -12,12 +12,9 @@ class Router {
 
 	route (path, options) {
 		for (let i = 0; i < rutas.length; i++) {
-			console.log(rutas[i])
 			if (rutas[i].ruta.path === path) {
 				for (const prop in options) {
 					if (prop !== 'children' && prop !== 'path') {
-						console.log('Añadimos: ' + prop)
-						console.log(options[prop])
 						rutas[i].ruta[prop] = options[prop]
 					}
 				}
