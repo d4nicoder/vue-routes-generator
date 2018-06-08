@@ -6,6 +6,10 @@
   "main": "dist/lib/vue-routes.min.js",
   "private": false,
   "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://gitlab.com/danitetus/vue-routes-generator"
+  },
   "scripts": {
     "prepublishOnly": "npm run build",
     "dev": "npm run dev:lib",
