@@ -13,6 +13,11 @@ class Router {
 	route (path, options) {
 		for (let i = 0; i < rutas.length; i++) {
 			if (rutas[i].ruta.path === path) {
+				for (const prop in options) {
+					if (prop !== 'component') {
+						rutas[i].ruta[prop] = options[prop]
+					}
+				}
 				return rutas[i]
 			}
 		}
