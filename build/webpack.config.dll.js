@@ -9,20 +9,20 @@ const entry = {}
 entry[pkg.dllPlugin.name] = pkg.dllPlugin.include
 
 module.exports = {
-  devtool: '#source-map',
-  entry,
-  output: {
-    path: buildPath,
-    filename: '[name].dll.js',
-    library: '[name]'
-  },
-  plugins: [
-    new webpack.DllPlugin({
-      name: '[name]',
-      path: join(buildPath, '[name].json')
-    })
-  ],
-  performance: {
-    hints: false
-  }
+	devtool: '#source-map',
+	entry,
+	output: {
+		path: buildPath,
+		filename: '[name].dll.js',
+		library: '[name]'
+	},
+	plugins: [
+		new webpack.DllPlugin({
+			name: '[name]',
+			path: join(buildPath, '[name].json')
+		})
+	],
+	performance: {
+		hints: false
+	}
 }

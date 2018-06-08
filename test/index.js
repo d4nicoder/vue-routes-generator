@@ -15,17 +15,17 @@ srcContext.keys().forEach(srcContext)
 
 // Use a div to insert elements
 before(function () {
-  const el = document.createElement('DIV')
-  el.id = 'tests'
-  document.body.appendChild(el)
+	const el = document.createElement('DIV')
+	el.id = 'tests'
+	document.body.appendChild(el)
 })
 
 // Remove every test html scenario
 afterEach(function () {
-  const el = document.getElementById('tests')
-  for (let i = 0; i < el.children.length; ++i) {
-    el.removeChild(el.children[i])
-  }
+	const el = document.getElementById('tests')
+	for (let i = 0; i < el.children.length; ++i) {
+		el.removeChild(el.children[i])
+	}
 })
 
 const specsContext = require.context('./specs', true)

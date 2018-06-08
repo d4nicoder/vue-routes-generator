@@ -13,27 +13,27 @@
 
 <script>
 export default {
-  data: () => ({
-    visible: true
-  }),
+	data: () => ({
+		visible: true
+	}),
 
-  computed: {
-    containerClasses () {
-      return {
-        'test-dom-container': true,
-        'test-dom-container--hidden': !this.visible
-      }
-    },
-    buttonText () {
-      return this.visible ? '-' : '+'
-    }
-  },
+	computed: {
+		containerClasses () {
+			return {
+				'test-dom-container': true,
+				'test-dom-container--hidden': !this.visible
+			}
+		},
+		buttonText () {
+			return this.visible ? '-' : '+'
+		}
+	},
 
-  methods: {
-    toggle () {
-      this.visible = !this.visible
-    }
-  }
+	methods: {
+		toggle () {
+			this.visible = !this.visible
+		}
+	}
 }
 </script>
 
