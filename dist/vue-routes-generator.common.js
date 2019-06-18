@@ -22,6 +22,11 @@ var Router$1 = function Router () {
 Router$1.prototype.route = function route (path, options) {
 	for (var i = 0; i < rutas.length; i++) {
 		if (rutas[i].ruta.path === path) {
+			for (var prop in options) {
+				if (prop !== 'children' && prop !== 'path') {
+					rutas[i].ruta[prop] = options[prop];
+				}
+			}
 			return rutas[i]
 		}
 	}
@@ -30,8 +35,8 @@ Router$1.prototype.route = function route (path, options) {
 		path: path
 	};
 
-	for (var prop in options) {
-		ruta[prop] = options[prop];
+	for (var prop$1 in options) {
+		ruta[prop$1] = options[prop$1];
 	}
 	var r = new Ruta(ruta);
 	rutas.push(r);
