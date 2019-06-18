@@ -1,8 +1,12 @@
 {
   "name": "vue-routes-generator",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "description": "A VueJS 2.x routes generator",
-  "author": "dcanada <dcanada@radiocastellon.com>",
+  "author": "dcanada <danitetus@gmail.com>",
+  "repository": {
+	"type": "git",
+	"url": "https://gitlab.com/danitetus/vue-routes-generator"
+  },
   "main": "dist/vue-routes-generator.common.js",
   "module": "dist/vue-routes-generator.esm.js",
   "browser": "dist/vue-routes-generator.js",

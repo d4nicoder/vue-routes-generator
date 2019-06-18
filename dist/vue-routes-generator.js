@@ -1,6 +1,6 @@
 /*!
  * vue-routes-generator v0.0.0
- * (c) 2018 dcanada
+ * (c) 2019 dcanada
  * Released under the MIT License.
  */
 
